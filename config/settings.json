@@ -1,0 +1,36 @@
+{
+  "_comment": "ShadowRecon v2.0 — default configuration. CLI flags override these values.",
+
+  "threads":    15,
+  "timeout":    8,
+  "rate_limit": 20,
+
+  "passive_only": false,
+  "no_html":      false,
+  "no_json":      false,
+  "verbose":      false,
+  "no_color":     false,
+
+  "github_token": "",
+  "shodan_key":   "",
+
+  "modules": "all",
+
+  "output_dir": "output",
+
+  "subdomain_wordlist_extra": [],
+
+  "api_wordlist_extra": [],
+
+  "user_agent": "Mozilla/5.0 (X11; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0",
+
+  "tls_deprecated_protocols": ["SSLv3", "TLS1.0", "TLS1.1"],
+
+  "port_scan_ports": "default",
+
+  "vhost_baseline_status_ignore": [400, 404, 502, 503],
+
+  "timing_smuggling_threshold_seconds": 5.0,
+
+  "cloud_bucket_suffixes_extra": []
+}
