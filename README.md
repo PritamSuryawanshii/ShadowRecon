@@ -10,36 +10,34 @@
   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝  ╚═════╝  ╚══╝╚══╝ ╚═╝  ╚═╝╚══════╝ ╚═════╝
 ```
 
-> **What recon-ng can't do — and then some.**
-
 ---
 
 ## What Makes ShadowRecon Different from recon-ng
 
-| Capability | recon-ng | ShadowRecon |
-|---|---|---|
-| Active TLS/SSL deep audit | ✗ | ✅ cipher, chain, HSTS, deprecated protos |
-| JS secret/endpoint extraction | ✗ | ✅ entropy-gated, 25+ patterns |
-| Cloud bucket discovery (S3/GCS/Azure/DO) | ✗ | ✅ unauthenticated, 200+ permutations |
-| WAF fingerprint + bypass hints | ✗ | ✅ 18 WAFs, provider-specific bypass tips |
-| ASN expansion via BGPView | ✗ | ✅ full CIDR range mapping |
-| Security header scoring w/ CWE | ✗ | ✅ 10 headers, A–F grade |
-| GitHub org recon + secret search | ✗ | ✅ repo tree, code search, gist |
-| Subdomain takeover (35+ sigs) | ✗ | ✅ HTTP-confirmed, dangling CNAME |
-| SPF/DKIM/DMARC/BIMI/MTA-STS | ✗ | ✅ full email security audit |
-| CORS misconfiguration probe | ✗ | ✅ wildcard, reflect, null-origin, Vary |
-| HTTP request smuggling detection | ✗ | ✅ CL.TE, TE.CL, TE.TE timing |
-| Virtual host brute-force | ✗ | ✅ Host-header fuzzing, 200+ words |
-| GraphQL introspection + batch | ✗ | ✅ field suggestions, type exposure |
-| Favicon hash fingerprint | ✗ | ✅ 100+ known hashes, Shodan/FOFA pivot |
-| Open redirect probe | ✗ | ✅ 25+ params on root + API endpoints |
-| HTTP dangerous method probe | ✗ | ✅ TRACE/PUT/DEBUG/WebDAV |
-| API endpoint fuzzing | ✗ | ✅ wordlist + JS-extracted paths |
-| Port scan with banner grab | partial | ✅ 35 ports, version extraction |
-| DNS permutation expansion | ✗ | ✅ generates + resolves alt variants |
-| Full HTML report (dark theme) | ✗ | ✅ filterable, searchable, severity chart |
-| Shared state between modules | ✗ | ✅ subdomains → takeover → vhost chain |
-| Scope file (multi-target) | ✗ | ✅ `--scope-file targets.txt` |
+| Capability | ShadowRecon |
+|---|---|
+| Active TLS/SSL deep audit | ✅ cipher, chain, HSTS, deprecated protos |
+| JS secret/endpoint extraction | ✅ entropy-gated, 25+ patterns |
+| Cloud bucket discovery (S3/GCS/Azure/DO) | ✅ unauthenticated, 200+ permutations |
+| WAF fingerprint + bypass hints | ✅ 18 WAFs, provider-specific bypass tips |
+| ASN expansion via BGPView | ✅ full CIDR range mapping |
+| Security header scoring w/ CWE | ✅ 10 headers, A–F grade |
+| GitHub org recon + secret search | ✅ repo tree, code search, gist |
+| Subdomain takeover (35+ sigs) | ✅ HTTP-confirmed, dangling CNAME |
+| SPF/DKIM/DMARC/BIMI/MTA-STS | ✅ full email security audit |
+| CORS misconfiguration probe | ✅ wildcard, reflect, null-origin, Vary |
+| HTTP request smuggling detection | ✅ CL.TE, TE.CL, TE.TE timing |
+| Virtual host brute-force | ✅ Host-header fuzzing, 200+ words |
+| GraphQL introspection + batch | ✅ field suggestions, type exposure |
+| Favicon hash fingerprint | ✅ 100+ known hashes, Shodan/FOFA pivot |
+| Open redirect probe | ✅ 25+ params on root + API endpoints |
+| HTTP dangerous method probe | ✅ TRACE/PUT/DEBUG/WebDAV |
+| API endpoint fuzzing | ✅ wordlist + JS-extracted paths |
+| Port scan with banner grab | ✅ 35 ports, version extraction |
+| DNS permutation expansion | ✅ generates + resolves alt variants |
+| Full HTML report (dark theme) | ✅ filterable, searchable, severity chart |
+| Shared state between modules | ✅ subdomains → takeover → vhost chain |
+| Scope file (multi-target) | ✅ `--scope-file targets.txt` |
 
 ---
 
@@ -213,4 +211,8 @@ def run(domain, args, out, state):
 
 ---
 
-*For authorized penetration testing only. Ensure you have written permission before scanning any target.*
+## Acknowledgements
+
+Development of ShadowRecon was accelerated with assistance from **Anthropic Claude** for research, architecture planning, implementation support, and documentation generation.
+
+---
